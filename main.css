@@ -1,36 +1,117 @@
-div {
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  ol {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 1.5ch;
-  }
-  
-  h2 {
-    margin-bottom: 4px;
-    padding: 0;
-  }
-  
-  .first-day {
-      grid-column-start: var(--first-day-start);
-  }
-  
-  .day-name {
-    background: #eee;
-    font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 2px;
-    padding: 4px;
-    text-align: center;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;@800&family=Raleway&display=swap');
+:root {
+	--primary-color: #d9d3bf;
+	--secondary-color: #f97b9b;
+	--tertiary-color: #4f618a;
+	--quaternary-color: #edda51;
+	--quinary-color: #0c2473;
+	--sextiaty-color: #0466cb;
+	--main-font: 'Montserrat', sans-serif;
+	--secondary-font: 'Raleway', sans-serif;
+}
+
+body {
+	background-color: var(--primary-color);
+	font-family: var(--main-font);
+	padding: 30px;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	top:0;
+	left: 0;
+	display: flex;
+	align-items: center;
+}
+
+.starting{
+	margin-left: 10px;
+}
+
+.starting::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 2px;
+	height: 30px;
+	background-color: var(--sextiaty-color);
+}
+
+.icon > img{
+	width: 30px;
+}
+
+.header-description{
+	font-size: 8px;
+	color: var(--quinary-color);
+	line-height: 5px;
+	margin-left: 10px;
+	margin-top: -13px;
+}
+
+.ending{
+	position: absolute;
+	right: 10px;
+}
+
+.ending::after{
+	content: "";
+	position: absolute;
+	right: -10px;
+	width: 2px;
+	height: 30px;
+	background-color: var(--sextiaty-color);
+}
+
+#container-image{
+	width: 100%;
+    height: 700px;
+    border: 1px solid red;
+}
+
+#container-calendar {
+	width: 100%;
+	height: 400px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.month-title {
+	display: flex;
+	justify-content: space-between;
+	text-transform: uppercase;
+	font-weight: bolder;
+	margin-left: 10px;
+	margin-right: 24px;
+  color:var(--quinary-color)
+}
+
+ol {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	margin: 0;
+	padding: 10px;
+}
+
+li {
+	font-size: 1.5ch;
+	width: 10px;
+	font-family: var(--secondary-font);
+  color:var(--quinary-color)
+}
+
+.first-day {
+	grid-column-start: var(--first-day-start);
+}
+
+.day-name {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 2px;
+	padding: 4px;
+	text-align: center;
+}
